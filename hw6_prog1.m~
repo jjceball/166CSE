@@ -1,0 +1,19 @@
+%% HW6 Programming Exercise 1
+close all
+
+%% Part A
+
+img = imread('/Users/jayceballos/Desktop/Prob10.18(right).jpg');
+img1 = imread('/Users/jayceballos/Desktop/Fig10.29(a).jpg');
+
+window = [3,3];
+
+[Gx, Gy] = gradient(img);
+
+i = 
+
+for i from > t
+    
+S = plot(
+
+%% Part B

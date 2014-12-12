@@ -1,0 +1,22 @@
+%% HW3 Problem 1
+
+%% Part A
+
+close all;
+
+u = -127:128;
+v = -127:128;
+
+[U, V] = meshgrid(u, v);
+
+H = ones(size (U)) ./ (U.*U + V.*V);
+
+H(128,128) = 0;
+
+Y = randn(size (U));
+
+fft2;
+
+ifft2;
+
+fftshift;

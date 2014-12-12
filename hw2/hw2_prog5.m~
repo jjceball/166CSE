@@ -1,0 +1,69 @@
+%% hw2 prog5
+
+close all;
+
+%% Part (a)
+
+img = imread('/Users/jayceballos/Desktop/Fig0424(a)(rectangle).tif');
+img2 = imread('/Users/jayceballos/Desktop/Fig0429(a)(blown_ic).tif');
+
+figure;
+imshow(img);
+figure;
+imshow(img2);
+
+F = fft2(img);
+F2 = fft2(img2);
+
+figure;
+imshow(F);
+figure;
+imshow(F2);
+
+m = abs(F);
+m2 = abs(F2);
+
+figure;
+
+f = (0:length(F)-1)*99/length(F);
+
+plot(f,m); title('Magnitude');
+
+figure;
+
+f2 = (0:length(F2)-1)*99/length(F2);
+
+plot(f2,m2); title('Magnitude');
+
+S = fftshift(F);
+S2 = fftshift(F2);
+
+figure;
+imshow(S);
+figure;
+imshow(S2);
+
+%% Part (b)
+
+img3 = imread('/Users/jayceballos/Desktop/61.jpg');
+
+figure;
+imshow(img3);
+
+F3 = fft2(img3);
+
+figure;
+imshow(F3);
+
+figure; 
+
+m3 = abs(F3);
+
+f3 = (0:length(F3)-1)*99/length(F3);
+
+plot(f3,m3); title('Magnitude');
+
+S3 = fftshift(F3);
+
+figure;
+imagesc(S3);
